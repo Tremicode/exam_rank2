@@ -27,7 +27,6 @@ $>./rot_13 "" | cat -e
 $
 $>*/
 
-#include <unistd.h>
 
 #include <unistd.h>
 

@@ -4,31 +4,6 @@ Your function must be declared as follows:
 
 char    *ft_strdup(char *src);*/
 
-#include <stdlib.h>
-
-char    *ft_strdup(char *src)
-{
-    int i = 0;
-    int length = 0;
-    char *duplicated_str;
-
-    while(src[length])
-            length ++;
-    duplicated_str = malloc(sizeof(*duplicated_str) * (length + 1));
-    if (duplicated_str != NULL)
-    {
-        while(src[i])
-        {
-            duplicated_str[i] = src[i];
-            i++;
-        }
-        duplicated_str[i] = '\0';
-    }
-
-    return(duplicated_str);
-
-}
-
 /*version aceptada por grademe*/ 
 #include <stdlib.h>
 

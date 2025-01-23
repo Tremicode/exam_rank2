@@ -34,27 +34,4 @@ int	ft_atoi(char *str)
     }
     return (result * sign);
 }
-int main(int argc, char **argv)
-{
-    int i = 1;
-    int atoi;
-    while (argc > i)
-    {
-         *argv[atoi = ft_atoi(i++)];
-        printf("resultado = %i", atoi);
-    }
-    return(0);
-    /*char str1[] = "1234";     // Cadena con número positivo
-    char str2[] = "-5678";    // Cadena con número negativo
-    char str3[] = "    +42";  // Cadena con espacios y número positivo
-    char str4[] = "  -123abc"; // Cadena con números y letras mezcladas
-
-    // Prueba de conversiones
-    printf("Resultado de ft_atoi(\"%s\") = %d\n", str1, ft_atoi(str1));
-    printf("Resultado de ft_atoi(\"%s\") = %d\n", str2, ft_atoi(str2));
-    printf("Resultado de ft_atoi(\"%s\") = %d\n", str3, ft_atoi(str3));
-    printf("Resultado de ft_atoi(\"%s\") = %d\n", str4, ft_atoi(str4));
-
-    return 0;*/
-}
 

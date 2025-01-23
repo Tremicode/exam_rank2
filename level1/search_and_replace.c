@@ -26,7 +26,6 @@ ZaZ eT David aiME le METal.$
 $>./search_and_replace "wNcOre Un ExEmPle Pas Facilw a Ecrirw " "w" "e" | cat -e
 eNcOre Un ExEmPle Pas Facile a Ecrire $*/
 
-#include <unistd.h>
 
 #include <unistd.h>
 

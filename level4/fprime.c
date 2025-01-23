@@ -88,7 +88,7 @@ int main(int argc, char **argv)
         {
             if(number % i == 0)
             {
-                prinf("%d",i);
+                printf("%d",i);
                 if(number == i)
                         break;
                 printf("*");

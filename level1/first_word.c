@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 
        if (argc == 2)
        {
-              while(argv[1][i] == ' ' && argv[1][i] == '\t') // 32 y 9 
+              while(argv[1][i] == ' ' || argv[1][i] == '\t') // 32 y 9 
                      i++;
               
               while (argv[1][i] != ' ' && argv[1][i] != '\t' &&  argv[1][i])

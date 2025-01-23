@@ -33,24 +33,3 @@ int max(int* tab, unsigned int len)
 
 }
 
-// version simplificada pasada por el grademe mejor la de arriba
-
-int max(int* tab, unsigned int len)
-{
-   int result = 0;
-   unsigned int = 0;
-
-   if(len == 0)
-    return (0);
-result = tab[i];
-
-while( i < len)
-{
-    if (result < tab[i])
-        result = tab[i];
-    i++;
-}
-
-return(result);
-
-}

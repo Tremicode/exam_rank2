@@ -18,28 +18,36 @@ Examples:
 - With (0, 0) you will return an array containing 0.
 - With (0, -3) you will return an array containing 0, -1, -2 and -3./*/
 
-#include <stdlib.h>
+ #include <stdlib.h>
 
-int     *ft_range(int start, int end)
+
+int *ft_range(int start, int end)
 {
     int i = 0;
-    int len = abs((end - start) +1);
-    int *res = (int *) malloc(sizeof(int) * len);
+    int len = abs(end - start) + 1;
+    int *res = (int *)malloc(sizeof(int) * len);
 
-    while (i < len)
+    if (!res) // Verificar si la memoria se asignó correctamente
+        return NULL;
+
+    if (start < end)
     {
-            if (start < end)
-            {
-                res[1] = start;
-                start++;
-                i++;
-            }
-            else
-            {
-                res[1] = start;
-                start--;
-                i++;
-            }
+        while (i < len)
+        {
+            res[i] = start;
+            start++;
+            i++;
+        }
     }
-    return(res);
+    else
+    {
+        while (i < len)
+        {
+            res[i] = start;
+            start--;
+            i++;
+        }
+    }
+
+    return res;
 }
