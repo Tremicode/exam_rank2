@@ -21,33 +21,43 @@ Examples:
  #include <stdlib.h>
 
 
-int *ft_range(int start, int end)
+#include <unistd.h>
+
+int     *ft_range(int start, int end)
 {
     int i = 0;
     int len = abs(end - start) + 1;
-    int *res = (int *)malloc(sizeof(int) * len);
+    int *temp = (int*) malloc (sizeof(int) * len);
 
-    if (!res) // Verificar si la memoria se asignó correctamente
-        return NULL;
+    if (!temp)
+    return (NULL);
 
-    if (start < end)
+    if (start <= end)
     {
+        
         while (i < len)
+        
         {
-            res[i] = start;
-            start++;
+            temp[i] = start;
+            start ++;
             i++;
-        }
+        }   
+         
     }
-    else
+
+    else 
     {
         while (i < len)
         {
-            res[i] = start;
+            temp[i] = start;
             start--;
             i++;
         }
+
     }
 
-    return res;
+    return temp;
+
+
+   
 }
