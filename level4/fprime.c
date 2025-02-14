@@ -101,3 +101,50 @@ int main(int argc, char **argv)
     printf("\n");
 
 }
+/*improved version*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char **argv)
+{
+    int i;
+    int number;
+
+    // Si el número de parámetros no es 2, imprime solo una nueva línea
+    if (argc != 2)
+    {
+        printf("\n");
+        return 0;
+    }
+
+    number = atoi(argv[1]);  // Convierte el argumento a entero
+
+    // Caso especial cuando el número es 1
+    if (number == 1)
+    {
+        printf("1\n");
+        return 0;
+    }
+
+    i = 2;  // Comienza desde el primer número primo
+
+    // Factorización en primos
+    while (number > 1)
+    {
+        if (number % i == 0)  // Si i es un factor de number
+        {
+            printf("%d", i);
+            number /= i;  // Divide el número por i
+            if (number > 1)
+                printf("*");  // Si el número no es 1, imprime un asterisco
+        }
+        else
+        {
+            i++;  // Si i no es factor, incrementamos i
+        }
+    }
+
+    printf("\n");  // Salto de línea al final
+    return 0;
+}
